@@ -11,6 +11,8 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
+    "react": "*",
+    "react-native": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/node": "^22.15.3",
