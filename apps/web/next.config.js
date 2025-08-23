@@ -1,11 +1,7 @@
-const withTM = require("next-transpile-modules")([
-  "react-native-web",
-  "ui",
-  "nativewind",
-  "react-native",
-]);
-module.exports = withTM({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ["react-native", "react-native-web", "nativewind", "ui"],
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -13,4 +9,6 @@ module.exports = withTM({
     };
     return config;
   },
-});
+};
+
+export default nextConfig;
