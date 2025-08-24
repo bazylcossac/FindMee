@@ -1,12 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-const { nativewind } = require("nativewind/preset");
-export default {
+// apps/web/tailwind.config.js
+const { join } = require("path");
+
+module.exports = {
   content: [
-    "./App.{js,jsx,ts,tsx}",
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "../../packages/ui/**/*.{js,jsx,ts,tsx}",
+    join(__dirname, "app/**/*.{js,ts,jsx,tsx}"),
+    join(__dirname, "components/**/*.{js,ts,jsx,tsx}"),
+    join(__dirname, "../../packages/ui/**/*.{js,ts,jsx,tsx}"),
   ],
-  presets: [nativewind],
   theme: {
     extend: {},
   },

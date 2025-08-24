@@ -7,9 +7,7 @@ type Props = Omit<ImageProps, "src"> & {
   srcDark: string;
 };
 
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
-
+const ThemeImage = ({ srcLight, srcDark, ...rest }: Props) => {
   return (
     <>
       <Image {...rest} src={srcLight} className="imgLight" />
@@ -63,7 +61,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <Button appName="web" className={styles.secondary}>
+        <Button appName="web" className="bg-red-300">
           Open alert
         </Button>
       </main>

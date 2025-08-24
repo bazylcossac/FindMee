@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { View } from "react-native";
+import { Pressable, Text, StyleSheet } from "react-native";
 
 type ButtonProps = {
   children: ReactNode;
@@ -11,11 +11,17 @@ type ButtonProps = {
 
 export const Button = ({ children, className, appName }: ButtonProps) => {
   return (
-    <button
-      className={className}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
+    <Pressable
+      onPress={() => alert(`Hello from your ${appName} app!`)}
+      style={styles.button}
     >
-      {children}
-    </button>
+      <Text>{children}</Text>
+    </Pressable>
   );
 };
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: "red",
+  },
+});
