@@ -5,7 +5,6 @@ import { Pressable, Text, StyleSheet } from "react-native";
 
 type ButtonProps = {
   children: ReactNode;
-  className?: string;
   appName: string;
 };
 

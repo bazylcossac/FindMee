@@ -61,7 +61,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <Button appName="web" className="bg-red-300">
+        <Button appName="web" style={styles.secondary}>
           Open alert
         </Button>
       </main>
