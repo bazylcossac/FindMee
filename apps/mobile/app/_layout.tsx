@@ -1,3 +1,5 @@
+// add s3 bucket to the project
+
 import React from "react";
 import {
   DarkTheme,
@@ -19,7 +21,6 @@ export default function RootLayout() {
   });
 
   if (!loaded) {
-    // Async font loading only occurs in development.
     return null;
   }
 

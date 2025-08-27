@@ -9,15 +9,15 @@ type ProfileCard = {
   imageUrl: string;
 };
 
-const ProfileCard = ({ name, imageUrl, batteryLevel }: ProfileCard) => {
+const ProfileCard = ({ name, batteryLevel }: ProfileCard) => {
   return (
     <View>
       <View style={styles.imageContainer}>
-        <Image />
+        <Image source={ProfileIcon} />
         <Text>{name}</Text>
       </View>
       <View>
-        <ProfileCardBetteryLevel />
+        <ProfileCardBetteryLevel batteryLevel={batteryLevel} />
       </View>
     </View>
   );
